@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Flores Portfolio</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Devicon for Tech Stack Icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-text-container" id="preloaderText"></div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+            <div class="preloader-percent" id="preloaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- Nav Bars -->
+    <div class="main-nav-container" id="mainNav">
+        <div class="pill-nav">
+            <div class="brand-badge">ACE FLORES</div>
+            <button class="burger-btn" id="openMenuBtn"><span class="line"></span><span class="line"></span></button>
+        </div>
+    </div>
+
+    <!-- Full Screen Menu -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="strips-container">
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+        </div>
+        <div class="menu-content h-100 container-fluid d-flex flex-column">
+            <div class="close-nav-container">
+                <div class="close-pill-nav">
+                    <div class="close-brand-badge">ACE FLORES</div>
+                    <button class="close-btn" id="closeMenuBtn">&#x2715;</button>
+                </div>
+            </div>
+            <div class="row flex-grow-1 align-items-center w-100 mx-0 mobile-content-wrapper">
+                <div class="col-12 col-md-9 px-3 px-md-5">
+                    <ul class="main-links-list ps-1 ps-md-5 text-center text-md-start">
+                        <li><a href="#hero" class="animated-link">Home</a></li>
+                        <li><a href="#aboutSection" class="animated-link">About</a></li>
+                        <li><a href="#projectsSection" class="animated-link">Projects</a></li>
+                        <li><a href="#footer" class="animated-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 text-center text-md-end mt-5 mt-md-0 px-3 px-md-5">
+                    <div class="social-links pe-md-4">
+                        <a href="https://www.instagram.com/eyss_floress/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/ace.flores.560" target="_blank">Facebook</a>
+                        <a href="https://github.com/eysuuu" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-auto px-2 px-md-5 pb-4">
+                <div class="col-6 ps-2 ps-md-5"><span class="footer-label">Copyright</span><span
+                        class="footer-text">&copy; 2026 Ace Flores</span></div>
+                <div class="col-6 text-end pe-2 pe-md-5"><span class="footer-label">Nickname</span><span
+                        class="footer-text">Eysu</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle" id="heroSubtitle">Student Web Developer</div>
+            <h1 class="hero-text-container" id="heroTextContainer"></h1>
+            <a href="https://www.facebook.com/ace.flores.560" target="_blank" class="get-in-touch-btn"
+                id="getInTouchBtn">
+                Get in touch
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="about-section" id="aboutSection">
+        <div class="container">
+            <div class="row align-items-center" id="aboutTopContent">
+                <div class="col-12 col-md-5 d-flex flex-column align-items-start">
+                    <h2 class="about-heading" id="aboutHeading"></h2>
+                    <div class="image-stack-container" id="imageStackContainer">
+                        <div class="image-stack-card active">
+                            <img src="img/me/me.jpg" alt="Ace Flores 2">
+                        </div>
+                        <div class="image-stack-card">
+                            <img src="img/me/ako.jpg" alt="Ace Flores 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 mt-5 mt-md-0">
+                    <div class="about-text-container">
+                        <div class="type-wrap">
+                            <p class="about-paragraph type-placeholder" id="placeholder1"></p>
+                            <p class="about-paragraph type-text" id="aboutText1"></p>
+                        </div>
+                        <div class="type-wrap">
+                            <p class="about-paragraph type-placeholder" id="placeholder2"></p>
+                            <p class="about-paragraph type-text" id="aboutText2"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIMELINE ROW -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="timeline-wrapper" id="timelineWrapper">
+                        <div class="timeline-line">
+                            <div class="timeline-line-progress" id="timelineProgress"></div>
+                        </div>
+                        <div class="timeline-item left timeline-animate">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2020 – 2021</div>
+                                <div class="timeline-title">Grade 11 ICT</div>
+                                <p class="timeline-text">During my Grade 11 ICT journey (2020–2021), I learned the
+                                    basics of JavaScript, but I did not focus deeply on it at that time because I was
+                                    still exploring programming.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right timeline-animate">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 – 2022</div>
+                                <div class="timeline-title">Grade 12</div>
+                                <p class="timeline-text">In Grade 12 (2021–2022), I became interested in web
+                                    development, and this was this time when I created my first website. This experience
+                                    helped me understand the foundation of how websites work.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left timeline-animate">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2022 – 2023</div>
+                                <div class="timeline-title">1st Year College</div>
+                                <p class="timeline-text">In my 1st year of college (2022–2023), I learned how to use C++
+                                    language, which helped me understand basic programming concepts and logic.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right timeline-animate">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2023 – 2024</div>
+                                <div class="timeline-title">2nd Year College</div>
+                                <p class="timeline-text">In my 2nd year (2023–2024), this was the year that shaped my
+                                    web development skills. My professor taught me how to use HTML, CSS, and JavaScript,
+                                    and I learned how to build proper websites.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left timeline-animate">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2024 – 2025</div>
+                                <div class="timeline-title">First 3rd Year</div>
+                                <p class="timeline-text">During my first 3rd year (2024–2025), I enhanced my logical
+                                    thinking and system development skills. I learned how to use VB.NET in Microsoft
+                                    Visual Studio 2010 and SQL Server for database management. My first major project
+                                    was a Barangay Project Management System.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right timeline-animate">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2025 – 2026</div>
+                                <div class="timeline-title">Current 3rd Year</div>
+                                <p class="timeline-text">In my current 3rd year (2025–2026), I learned how to use
+                                    Bootstrap, PHP, and MySQL for web development. This year also improved my system
+                                    logic and introduced me to the System Analyst role in our capstone project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY STACK SECTION -->
+    <section class="tech-stack-section" id="techStack">
+        <h2 class="tech-stack-heading">TECHNOLOGY STACK</h2>
+        <div class="marquee-wrapper">
+            <div class="marquee-track left">
+                <div class="marquee-items">
+                    <div class="marquee-item"><i class="devicon-html5-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-css3-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-javascript-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-bootstrap-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-html5-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-css3-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-javascript-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-bootstrap-plain colored"></i></div>
+                </div>
+                <div class="marquee-items">
+                    <div class="marquee-item"><i class="devicon-html5-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-css3-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-javascript-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-bootstrap-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-html5-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-css3-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-javascript-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-bootstrap-plain colored"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track right">
+                <div class="marquee-items">
+                    <div class="marquee-item"><i class="devicon-php-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-mysql-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-vscode-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-github-original colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-dotnetcore-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-microsoftsqlserver-plain colored"></i></div>
+                </div>
+                <div class="marquee-items">
+                    <div class="marquee-item"><i class="devicon-php-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-mysql-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-vscode-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-github-original colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-dotnetcore-plain colored"></i></div>
+                    <div class="marquee-item"><i class="devicon-microsoftsqlserver-plain colored"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projectsSection">
+        <div class="container">
+            <div class="projects-header row">
+                <div class="col-12 col-md-3">
+                    <span class="selected-work-label">▪ SELECTED WORK</span>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="projects-headline-container">
+                        <span class="projects-ghost-text">Building responsive websites, interactive interfaces, and
+                            modern web applications.</span>
+                        <span class="decrypt-text" id="projectsHeadline"
+                            data-text="Building responsive websites, interactive interfaces, and modern web applications."></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project 1 -->
+                <div class="project-card project-animate" onclick="openProjectModal('project1')">
+                    <div class="project-image-wrapper" onmousemove="moveCursor(event, this)">
+                        <img src="img/datamexcollege/hero.jpg" alt="Project 1">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-title-container">
+                        <h3 class="projects-ghost-text project-title">Datamex College website</h3>
+                        <h3 class="project-title decrypt-text project-decrypt-title"
+                            data-text="Datamex College website"></h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card project-animate" onclick="openProjectModal('project2')">
+                    <div class="project-image-wrapper" onmousemove="moveCursor(event, this)">
+                        <img src="img/greasemonkey/hero.jpg" alt="Project 2">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-title-container">
+                        <h3 class="projects-ghost-text project-title">Grease Monkey website</h3>
+                        <h3 class="project-title decrypt-text project-decrypt-title" data-text="Grease Monkey website">
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card project-animate" onclick="openProjectModal('project3')">
+                    <div class="project-image-wrapper" onmousemove="moveCursor(event, this)">
+                        <img src="img/pixelseven/hero.jpg" alt="Project 3">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-title-container">
+                        <h3 class="projects-ghost-text project-title">Pixel Seven website</h3>
+                        <h3 class="project-title decrypt-text project-decrypt-title" data-text="Pixel Seven website">
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card project-animate" onclick="openProjectModal('project4')">
+                    <div class="project-image-wrapper" onmousemove="moveCursor(event, this)">
+                        <img src="img/acefloresportfolio/hero.jpg" alt="Project 4">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-title-container">
+                        <h3 class="projects-ghost-text project-title">Recent Portfolio</h3>
+                        <h3 class="project-title decrypt-text project-decrypt-title" data-text="Recent Portfolio">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="sketch-interactive-area" id="sketchInteractiveArea" onmousemove="moveCursor(event, this)"
+                onclick="this.scrollIntoView({ behavior: 'smooth', block: 'center' })">
+                <div class="view-cursor-tracker sketch-explore-tracker">
+                    <span class="custom-cursor-btn">
+                        <span class="btn-char" style="--i: 8; margin-right: 6px;">▪</span>
+                        <span class="btn-char" style="--i: 7;">E</span>
+                        <span class="btn-char" style="--i: 6;">X</span>
+                        <span class="btn-char" style="--i: 5;">P</span>
+                        <span class="btn-char" style="--i: 4;">L</span>
+                        <span class="btn-char" style="--i: 3;">O</span>
+                        <span class="btn-char" style="--i: 2;">R</span>
+                        <span class="btn-char" style="--i: 1;">E</span>
+                    </span>
+                </div>
+
+                <div class="sketch-studies-container" id="sketchSection">
+                    <div class="sketch-center-images">
+                        <img src="img/projectmanagement/admin/login.png" alt="Sketch 1" class="sketch-img">
+                        <img src="img/slidetech/hero.jpg" alt="Sketch 2" class="sketch-img">
+                        <img src="img/orderingsystem/dashboard.jpg" alt="Sketch 3" class="sketch-img">
+                        <img src="img/runaigame/hero.jpg" alt="Sketch 4" class="sketch-img">
+
+                    </div>
+                    <div class="sketch-studies-content d-flex justify-content-between">
+                        <div class="sketch-left-text">
+                            <h2 class="sketch-title-block m-0">
+                                <span class="sketch-title-line">Project</span>
+                                <span class="sketch-title-line">Works</span>
+                            </h2>
+                        </div>
+                        <div class="sketch-right-text">
+                            <div class="sketch-desc-lines">
+                                <span class="sketch-desc-line">These projects showcase my ability to</span>
+                                <span class="sketch-desc-line">design and develop responsive websites</span>
+                                <span class="sketch-desc-line">and interactive web applications.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        </div>
+    </section>
+
+ 
+    <div class="explore-overlay" id="exploreOverlay">
+     
+        <div class="explore-header">
+            <div class="explore-logo">
+                <svg viewBox="0 0 100 100" fill="#e6e4dc" width="50" height="50">
+                    <path d="M0,0 h100 v30 h-60 v70 h-40 z" />
+                </svg>
+            </div>
+            <button class="explore-close-btn" id="exploreCloseBtn">&#x2715;</button>
+        </div>
+
+    
+        <div class="explore-drag-label">▪ DRAG</div>
+
+       
+        <div class="explore-container" id="exploreContainer">
+            <div class="explore-track" id="exploreTrack">
+
+                <!-- Project 5 -->
+                <div class="explore-item item-1" onmousemove="moveCursor(event, this)"
+                    onclick="handleExploreItemClick('project5', event)">
+                    <div class="explore-image-wrapper">
+                        <img src="img/runaigame/hero.jpg" alt="Project 5" draggable="false">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="explore-item item-2" onmousemove="moveCursor(event, this)"
+                    onclick="handleExploreItemClick('project6', event)">
+                    <div class="explore-image-wrapper">
+                        <img src="img/orderingsystem/dashboard.jpg" alt="Project 6" draggable="false">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="explore-item item-3" onmousemove="moveCursor(event, this)"
+                    onclick="handleExploreItemClick('project7', event)">
+                    <div class="explore-image-wrapper">
+                        <img src="img/slidetech/hero.jpg" alt="Project 7" draggable="false">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="explore-item item-4" onmousemove="moveCursor(event, this)"
+                    onclick="handleExploreItemClick('project8', event)">
+                    <div class="explore-image-wrapper">
+                        <img src="img/projectmanagement/admin/login.png" alt="Project 8" draggable="false">
+                        <div class="view-overlay"></div>
+                        <div class="view-cursor-tracker">
+                            <span class="custom-cursor-btn">
+                                <span class="btn-char" style="--i: 4; margin-right: 6px;">▪</span>
+                                <span class="btn-char" style="--i: 3;">V</span>
+                                <span class="btn-char" style="--i: 2;">I</span>
+                                <span class="btn-char" style="--i: 1;">E</span>
+                                <span class="btn-char" style="--i: 0;">W</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="project-modal-overlay" id="projectModalOverlay">
+        <div class="project-modal-content">
+            <button class="modal-close-btn" id="modalCloseBtn">&#x2715;</button>
+            <div class="modal-carousel-container">
+                <div class="modal-carousel-track" id="modalCarouselTrack"></div>
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <div class="modal-details">
+                <h2 class="modal-title" id="modalProjectTitle">Project Title</h2>
+                <p class="modal-desc" id="modalProjectDesc">Detailed project description goes here.</p>
+                <div class="modal-tech-stack" id="modalProjectStack"></div>
+                <a href="#" class="modal-visit-btn" id="modalProjectLink" target="_blank">Visit Website ↗</a>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close-btn" id="lightboxCloseBtn">&#x2715;</button>
+        <img src="" alt="Full View" class="lightbox-img" id="lightboxImg">
+    </div>
+
+
+
+    <footer class="site-footer" id="footer">
+        <div class="container footer-top">
+            <div class="row align-items-end">
+             
+                <div class="col-12 col-lg-8">
+                    <h2 class="footer-heading">
+                        <span class="footer-line footer-animate" style="transition-delay: 0s">LET'S MAKE</span>
+                        <span class="footer-line footer-animate" style="transition-delay: 0.1s">IT</span>
+                        <span class="footer-line footer-animate" style="transition-delay: 0.2s">HAPPEN</span>
+                        <span class="footer-line footer-animate" style="transition-delay: 0.3s">TOGETHER.</span>
+                    </h2>
+                </div>
+               
+                <div class="col-12 col-lg-4 mt-5 mt-lg-0 mb-lg-3">
+                    <div class="footer-right-content">
+                        <p class="footer-desc footer-animate" style="transition-delay: 0.4s">We champion transformation
+                            through design, regardless of your project idea or goal.</p>
+                        <a href="https://www.facebook.com/ace.flores.560" class="footer-btn footer-animate"
+                            style="transition-delay: 0.5s">START A CONVERSATION <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="footer-social-row footer-animate" style="transition-delay: 0.6s">
+                <a href="https://www.instagram.com/eyss_floress/" target="_blank">Instagram ↗</a>
+                <a href="https://www.facebook.com/ace.flores.560" target="_blank">Facebook ↗</a>
+                <a href="https://github.com/eysuuu" target="_blank">Github ↗</a>
+            </div>
+        </div>
+
+        
+        <div class="footer-huge-container footer-animate-container" id="footerHugeContainer">
+            <div class="footer-huge-text" id="footerHugeText"></div>
+        </div>
+
+          <div class="container footer-bottom footer-animate" style="transition-delay: 0.2s">
+            <div class="footer-divider"></div>
+            <div class="footer-copyright-row">
+                <span class="copyright-text">© 2026 Ace Flores. All Rights Reserved.</span>
+              
+                <div class="footer-policy">
+                    <a href="#hero" class="smooth-scroll">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
